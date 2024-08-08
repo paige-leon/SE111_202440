@@ -1,0 +1,26 @@
+body{
+    margin:0%;
+}
+div{
+    margin:0%;
+    padding: 15px;
+}
+p{
+    margin: 0px 5px;
+}
+#header{
+    background-color: aquamarine;
+}
+#nav{
+    background-color: yellowgreen;
+}
+#main{
+    background-color: rgb(107, 88, 107);
+}
+#footer{
+    background-color:rgb(236, 194, 141);
+}
+.center{
+    text-align: center;
+
+}
