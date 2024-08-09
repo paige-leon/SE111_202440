@@ -8,18 +8,18 @@ div{
 p{
     margin: 0px 5px;
 }
+
 #header{
-    background-color: aquamarine;
+    background-color: rgb(96, 194, 240);
 }
-#nav{
-    background-color: yellowgreen;
+#nav, #footer{
+    background-color: rgb(218, 124, 181);
 }
 #main{
-    background-color: rgb(107, 88, 107);
+    background-color: rgb(241, 197, 167);
+    margin:0px 5%;
 }
-#footer{
-    background-color:rgb(236, 194, 141);
-}
+
 .center{
     text-align: center;
 
