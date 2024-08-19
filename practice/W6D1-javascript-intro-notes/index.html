@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Javascript Notes</title>
+</head>
+<body>
+
+    <!--Can do in-line scripts.  if in document typically put on the bottom of the page.  If seperate file, a src="" can be put in the script tag-->
+    <script>
+
+        //JS data types are divided between those that contain values and those that do not
+
+        //Contain values
+        var stringExample = 'this is a string'
+        var numberExample = 12.34 //Note that number variables are always floats
+        var booleanExample = true //Note that unlike python true/false are lowercase
+        function functionExample(){
+            console.log("Hello World")
+        }
+        //Objects are also an example but we'll get to that later
+
+        //Cannot contain values
+        //-----------------------
+        //null: Means the vaiable or function does not exist.  If you get null, assume there is a misspelling somewhere probably
+        //undefined: Means the variable is declared but has no value.
+            var undefinedExample //var declares the variable but there is no equals sign to give it value
+        
+        //conditional statements :))))
+        //reminder conditions are broked down into 3 parts. value | coparative | value
+        
+        /*
+            == equals
+            != not equal
+            < less than
+            > greater than
+            <= less than or equal to
+            >= greater than or equal to
+            && and
+            || or
+
+
+            === checks equality of value AND data type
+            !== checks inequality of value AND data type
+
+            ex. */
+                var num1 = 7
+                var num2 = "7"
+
+                num1 == num2 //is true
+                num1 === num2 //is false
+       
+        if(booleanExample == true){
+
+        }
+
+        //Common JS Functions
+        console.log("Used for debugging.  Writes directly to console")
+        alert("used for debugging & messages. Creates a pop up. Stops program run until ok is clicked")
+        prompt("collects data from a oops the slide changed rip in peace")
+
+        
+    </script>
+</body>
+</html>

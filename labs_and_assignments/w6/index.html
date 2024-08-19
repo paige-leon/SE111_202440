@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Paige Leon
+        SE111
+        08/19/24
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "author" content = "Paige Leon">
+    <meta name = "description" content = "Starting Index File">
+    <title>Pay Calculator</title>
+</head>
+<body>
+    <script>
+        var hourlyPay, hoursWorked, subTotal, taxesPayed, totalPay
+        var taxRate = 0.2
+
+        //Recieve user input
+        hourlyPay = prompt("Please enter your hourly pay:")
+        hoursWorked = prompt("How many hours do you work weekly?")
+
+        //Convert to numbers
+        hourlyPay = Number(hourlyPay)
+        hoursWorked = Number(hourlyPay)
+
+        //Calculations
+        subTotal = hourlyPay * hoursWorked
+        taxesPayed = subTotal * taxRate
+        totalPay = subTotal - taxesPayed
+
+        //Output (Alert)
+        alert(`
+             Gross Pay: $${subTotal.toFixed(2)}\n
+            Taxes Paid: $${taxesPayed.toFixed(2)}\n
+               Net Pay: $${totalPay.toFixed(2)}
+            `)
+
+        //Output (Console)
+        console.log(` Gross Pay: $${subTotal.toFixed(2)}`)
+        console.log(`Taxes Paid: $${taxesPayed.toFixed(2)}`)
+        console.log(`   Net Pay: $${totalPay.toFixed(2)}`)
+
+    </script>
+</body>
+</html>
