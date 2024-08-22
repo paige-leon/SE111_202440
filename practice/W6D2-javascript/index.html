@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo</title>
+</head>
+<body>
+    <h1>Week 6 Intro Demo | Javascript</h1>
+
+    <button onclick="hello()">Say Hi ;]</button><!--This pulls the hello() function from the script section of the code-->
+    <!--In document javascript should always go at the END-->
+    <script>
+        //EZ single line comments again we're so fucking backkkkk
+        /*
+            Block comments too lets fucking goooo
+        */
+       
+        //Make some variables --> Dont forget to declare (!)
+        var num1 = 10
+        var num2 = 27
+
+        var sum = num1 + num2
+
+        //Display some stuff (for developers)
+        console.log(`The sum of ${num1} and ${num2} is ${sum}`)
+
+        //Display some stuff (for the user)
+        var name = prompt(`Enter your name:`) //For popup w/ user input
+        alert(`Hello ${name}! The sum of ${num1.toFixed(2)} and ${num2} is ${sum.toFixed(2)}`) //For just a popup. toFixed -> x.00
+        
+        //note that this deosn't appear in the console until the popup's are okay'd
+        console.log(`Alert complete, ${name}`)
+
+        //Conditionals & Functions
+            //(There are notes on this online.  This will be imporant if I fall behind in notetaking)
+        var num3
+        var clicks = 0
+        function goodbye(){
+            alert(`Goodbye :3`)
+        }
+        function hello(){
+            clicks ++
+            console.log(`button clicked ${clicks} time(s)!`)
+            alert(`Hello World :3`)
+        }
+        while(num3 != "Q"){
+            num3 = prompt(`Enter a number, ${name}: `)
+
+            if(num3 % 2 === 0){
+                alert(`The number is EVEN!`)
+            }
+            else if(num3 % 2 === 1){
+                alert(`The number is ODD!`)
+            }
+            else{
+                alert(`This isn't a number!`)
+            }
+        }
+        goodbye()
+    </script>
+</body>
+</html>
