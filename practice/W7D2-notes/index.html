@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name = "author" content = "Paige Leon">
+    <meta name = "description" content = "Pay Calculator">
+
+    <title>Pay Calculator</title>
+</head>
+<body>
+
+    <h1>Pay Calculator</h1>
+
+    <form>
+
+        <table>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="first" class="questions">First Name: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="first" id="first">
+
+                </td>
+            </tr>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="last" class="questions">Last Name: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="last" id="last">
+
+                </td>
+            </tr>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="age" class="questions">AGE: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="age" id="age">
+
+                </td>
+            </tr>
+
+            
+            <tr>
+                <!--left side: questions-->
+                
+                <td>
+                    <br>
+                    <br>
+                   <input type="button" id="enter-button" value="ENTER">
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    
+
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <br>
+    <br>
+
+    <!--a div to hold some info from the form-->
+
+    <h2 id="hello">Hello</h2>
+
+    <div id="info" style="border:1px solid black; width:500px; height:200px;">
+    
+    </div><!--# info-->
+
+    <br>
+    <br>
+    <br>
+
+    <!--not just buttons can have click events!-->
+
+    <p id="me">
+        Click!
+    </p>
+
+    <p id="you">
+        Click!
+    </p>
+
+    <input type="button" id="submit" value="COOL STUFF!">
+
+    <br><br><br><br><br>
+    <p>end</p>
+
+    <!--Scripting time baybeeee-->
+    <script>
+        //Not terrible commenting yayy
+
+        //selecting elements from the HTML document --> 'document' is current HTML file
+        //global variables: accessible everywhere
+        var body = document.querySelector(`body`) //can only select 1 elemnt ex. if 'p' it will only grab the first instance of <p>.
+
+        console.log(body)
+        //create a new variable to hold the new html element
+        var newP = ``
+
+        newP += `<p>`
+        newP += `hello world! This content was added the the paige with <b>Javascript</b>`
+        newP += `</p>`
+
+        console.log(newP)
+
+        //add new HTML element to the page - this will add to the END of the BODY
+        body.innerHTML += newP
+        body.style.backgroundColor = `beige` //You can use CSS here by using var.style.csstag = 'thing'
+
+        //Event listeners
+        //set up an actionable event so that whena button is clicked info is written to the page (#info)
+
+        //First: add event listener for the event to the element #enter-button
+        document.querySelector(`#enter-button`).addEventListener(`click`, alertInfo) //addEventListener("event type, function that runs once event")
+
+        //event based functions MUST include EVENT PARAMETER (e/ev/event)
+        
+        //alertInfo() definition below
+        function alertInfo(event){
+            
+            //local vars: their value only exists INSIDE of the function
+            var fname = document.querySelector(`#first`).value
+            var lname = document.querySelector(`#last`).value
+            var age = Number(document.querySelector(`#age`).value) //cant do math with strings :O
+
+            //write to console
+            console.log(fname, lname, age)
+
+            //conditionals
+            if (age >= 18){
+                alert(`you are old enough to vote`)
+            }
+            else{
+                alert(`you are not old enough to vote`)
+            }
+
+            //grab the hello element
+            var hello = document.querySelector(`#hello`)
+
+            //write into it your name
+            hello.innerHTML += `, ${fname} :3`
+
+
+            //store #info
+            var info = document.querySelector(`#info`)
+
+            //got that dawg in me
+            var dogAge = (age * 7).toFixed(1)
+
+            //test values
+            console.log(`Your age in dog ${dogAge}`)
+
+            //add age messages to 
+            info.innerHTML += `<p><b>YOUR AGE:</b> ${age} human years<br><b>DOG AGE: </b>${dogAge} dog years`
+    
+
+        }//alertInfo() close
+
+
+        //console.log(dogAge) //Note this doesn't work because it's outside of the function and dogAge is a local variable
+        
+        //some more global variables
+        var me = document.querySelector(`#me`)
+        var you = document.querySelector(`#you`)
+
+        //add event listeners to non button items.
+        me.addEventListener(`click`, clicked)
+        you.addEventListener(`click`, clicked)
+
+        function clicked(event){
+            console.log(`clicked() reached~`)
+
+            if(this.style.color != `red`){
+                this.style.color = `red`
+                this.style.fontSize = `40px`
+            }
+            else{
+                this.style.color = `black`
+                this.style.fontSize = `16px`
+            }
+        }
+
+	</script>
+	
+</body>
+</html>
