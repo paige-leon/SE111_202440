@@ -108,7 +108,7 @@
             <!--new <p> for each question followed by a <h6> tag to hold the answer-->
             <div id="q-0" class="question-div">
                 <!--title for riddles question-->
-                <h4 title="I got this from the book I'm currently reading XD">I'm Not Really a Riddle but a Famous Crossword Clue</h4>
+                <h4 title="I got this from the book I'm currently reading XD">I'm Not Really a Riddle but a Famous Crossword Clue (Also I changed this one because I didn't get it lol)</h4>
                 <!--<p> for the question; id lets us find it in JS, class helps us style-->
                 <p id="question0" class="question">Two girls, one on each knee</p>
                 <!--<h6> holds the answer, which will be revealed once clicked-->
@@ -148,9 +148,9 @@
             <!--***here is the reusable div, but empty for you to fill out with your first riddle-->
             <div id="q-3" class="question-div">
 
-                <h4>_RIDDLE_TITLE_</h4>
+                <h4>I'm so bad at Riddles, Dude</h4>
 
-                <p id="question3" class="question">_YOUR_FIRST_RIDDLE_HERE_</p>
+                <p id="question3" class="question">What word starts with E and ends with E but only has one letter</p>
 
                 <h6 id="answer3" class="answer" onclick="reveal(3)"><span class="hover-color">Click Here for Answer!</span></h6>
 
@@ -159,7 +159,14 @@
 
             <!--QUESTION #4-->
             <!--***for the final question, you're on your own ;] DON'T WORRY! You already have 4 examples above you on how to set it up!-->
+            <div id="q-4" class = "question-div">
 
+                <h4>A Riddle That's Impossible Without the Proper Context</h4>
+                <p id="question4" class = "question">What's black & white and wet all over</p>
+                <h6 id = "answer4" class = "answer" onclick = "reveal(4)"><span class = "hover-color">Click Here for Answer!</span></h6>
+
+                <hr>
+            </div>
 
 
 
@@ -185,13 +192,13 @@
         //declare some global variables to hold the answers to your riddles
         //naming convention: 'a' for answer, '#'' corresponds with the question #
         //we start at 0 in computer science!
-        var a0 = "Patella! (Pat + Ella)"
+        var a0 = "Two Lesbians Proposing to Each Other"
         var a1 = "A mouse! :_smiling_Douglas_Englebart_pic_:"
         var a2 = "A stamp"
 
         //***ADD YOUR OWN two riddle answers below
-        var a3
-        var a4
+        var a3 = "Envelope"
+        var a4 = "My cat Boris after eating (he is a very messy eater ≽^•⩊•^≼)"
 
         /*
 
@@ -236,8 +243,11 @@
             if (num === 1) {answer = a1}
             if (num === 2) {answer = a2}
 
+
             
             //***ADD IN two more if statements to assign the a3 and a4 values!
+            if (num === 3) {answer = a3}
+            if (num === 4) {answer = a4}
 
             //the 'Click Here for Answer' text and holding <span> element will be entirely replaced based on which answer was assigned in above control flow block
             display.innerHTML = answer
