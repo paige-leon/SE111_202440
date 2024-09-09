@@ -33,8 +33,13 @@
 		//For in loop to 
 		for(key in people[i]){
 			console.log(i, key, people[i][key])//testing that the loop works the way I want :O
-			tempDiv.setAttribute("id", `${i}`) //set id as i (hopefully)
-			
+			tempDiv.setAttribute(`id`, `${i}`) //set id as i (hopefully)
+			tempDiv.setAttribute(`class`, `border`)
+
+			var tempP = document.createElement(`p`)
+			var textNode = `${people[i][key]}`
+			tempP.append(textNode)
+			tempDiv.append(tempP)
 		}
 
 		//Add to the body
