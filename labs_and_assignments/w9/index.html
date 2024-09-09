@@ -36,13 +36,20 @@
 			tempDiv.setAttribute(`id`, `${i}`) //set id as i (hopefully)
 			tempDiv.setAttribute(`class`, `border`)
 
+			//create temp p
 			var tempP = document.createElement(`p`)
+			
+			//create text to put into temp p
 			var textNode = `${people[i][key]}`
+			
+			//put text into temp p
 			tempP.append(textNode)
+			
+			//put temp p into temp div
 			tempDiv.append(tempP)
 		}
 
-		//Add to the body
+		//Add temp div to the body
 		body.append(tempDiv)
 	}
 	
