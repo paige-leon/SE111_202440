@@ -15,14 +15,19 @@
 <script type="text/javascript">
 	//Use this Array of objects to complete the assignment.
 	var body = document.querySelector(`body`)
+	
+	//Replaced the movies with the Strawhat Pirates names and positions in the crew. 
 	var people =[
-		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
-		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
-		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
-		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
-		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
-		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
-		{first:"Marion", last:"Cobretti", credit:"Cobra" }
+		{familyName:"Monkey D.", givenName:"Luffy", credit:"Captain"}, //they use the japanese naming structure ["last" name first then "first" name] hence the familyName/givenName structure
+		{familyName:"Roronoa", givenName:"Zoro", credit:"1st Mate" },
+		{familyName:"Vinsmoke", givenName:"Sanji", credit:"Cook" },
+		{title:"Cat Burglar", givenName:"Nami", credit:"Navigaor" }, //not all characters know their last name so they get a nickname/title instead
+		{title:"God", givenName:"Usopp", credit:"Sniper" },
+		{familyName:"Tony Tony", givenName:"Chopper", credit:"Doctor" },
+		{familyName:"Nico", givenName:"Robin", credit:"Archeologist" },
+		{title: "Cyborg", chosenName: "Franky", credit:"Shipwright"}, //He changed his own name so his name isn't given
+		{title: "Soul King", givenName: "Brook", credit:"Musician"},
+		{title: "First Son of the Sea", givenName: "Jinbe", credit:"Helmsman"}
 	]
 	for(i = 0; i < people.length; i++){
 		console.log(i, people[i])
